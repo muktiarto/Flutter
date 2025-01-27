@@ -1,26 +1,60 @@
 import 'package:flutter/material.dart';
-const warna = Color.fromARGB(255, 68, 16, 241);
-main() => runApp(MyApp());
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+void main() => runApp(aplikasi_X());
+
+class aplikasi_X extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Aplikasi Test"),backgroundColor: warna),
-        body: TextFormField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
-              borderSide: BorderSide(color: const Color.fromARGB(255, 251, 251, 251))
+          backgroundColor: Color.fromARGB(107, 1, 245, 131),
+          title: Text("Aplikasi X")
+        ),
+        body: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "Enter your username"
+                )
+              )
             ),
-            labelText: "Username",
-            hintText: "Input Username",
-            prefixIcon: Icon(Icons.supervisor_account)
-          )
-        )
-    )
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "Enter your password"
+                )
+              )
+            ),
+            SizedBox(
+            height: 50,
+            width: 150,
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, "/Homepage");
+                print("Button ditekan");
+            },  
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 68, 16, 241),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)
+                )
+              ),
+            child: Text("LOGIN",style:TextStyle(
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontSize: 20
+              )
+             )
+            )
+            )
+          ],
+        ),
+      ),
     );
   }
 }
