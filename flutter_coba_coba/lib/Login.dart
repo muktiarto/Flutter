@@ -10,7 +10,11 @@ class Login extends StatelessWidget{
           Text("APAR"),
           Text("Hydrant"),
           Text("Fire Alarm"),
-          Text("P3K")
+          Text("P3K"),
+          ElevatedButton(onPressed: () {
+            Navigator.popAndPushNamed(context, "/home");
+          },
+          child: Text("Back"))
         ],
         )
       ),
