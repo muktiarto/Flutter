@@ -8,10 +8,27 @@ class Homepage extends StatelessWidget{
       ),
         body: GridView.count(crossAxisCount: 2,
           children: [
-            Image(image: AssetImage('Images/APAR.png')),
-            Image(image: AssetImage('Images/fire_alarm.png')),
-            Image(image: AssetImage('Images/p3k.png')),
-            Image(image: AssetImage('Images/Hydrant.png')),
+            FloatingActionButton(onPressed: (){
+              Navigator.pushNamed(context, "/home_apar");
+              debugPrint("APAR clicked");
+            },
+            child: Ink.image(image: AssetImage('Images/APAR.png'))
+            ),
+            FloatingActionButton(onPressed: (){
+              debugPrint("Fire Alarm clicked");
+            },
+            child: Ink.image(image: AssetImage('Images/fire_alarm.png'))
+            ),
+             FloatingActionButton(onPressed: (){
+              debugPrint("P3K clicked");
+            },
+            child: Ink.image(image: AssetImage('Images/p3k.png'))
+            ),
+            FloatingActionButton(onPressed: (){
+              debugPrint("Hydrant clicked");
+            },
+            child: Ink.image(image: AssetImage('Images/Hydrant.png'))
+            ),
           ],
         )
     );

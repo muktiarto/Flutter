@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'homepage.dart';
+import 'apar.dart';
 void main(){
   runApp(sistem());
 }
@@ -12,7 +13,8 @@ class sistem extends StatelessWidget {
       initialRoute: "/testing",
       routes: {
         "/testing":(context)=>aplikasi_X(),
-        "/homepage":(context)=>Homepage()
+        "/homepage":(context)=>Homepage(),
+        "/home_apar":(context)=>apar()
       },
     );
   }
