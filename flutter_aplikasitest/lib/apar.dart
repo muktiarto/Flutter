@@ -7,18 +7,16 @@ class apar extends StatelessWidget{
         home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(107, 1, 245, 131),
-          title: Text("Aplikasi X")
+          title: Text("Aplikasi X",
+          style: TextStyle(
+            color: Color.fromARGB(107, 17, 0, 255)
+          ),)
         ),
         body: Container(
-          child: Column(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Padding(
-                
-                padding:EdgeInsets.symmetric(vertical: 20,horizontal: 60),
-                child:
-                Image(image: AssetImage('Images/Apar_home.png'))
-              ),
-              Text("Ini adalah halaman depan APAR")
+              Image(image: AssetImage('Images/Apar_home.png'))
             ]
           )
         ),
