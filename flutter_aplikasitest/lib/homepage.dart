@@ -14,6 +14,7 @@ class Homepage extends StatelessWidget{
             },
             child: Ink.image(image: AssetImage('Images/APAR.png'))
             ),
+
             FloatingActionButton(onPressed: (){
               debugPrint("Fire Alarm clicked");
             },

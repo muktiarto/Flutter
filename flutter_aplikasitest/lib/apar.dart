@@ -13,14 +13,41 @@ class apar extends StatelessWidget{
           ),)
         ),
         body: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Image(image: AssetImage('Images/Apar_home.png'))
-            ]
-          )
+          child: Column(
+            children: <Widget>[
+              Row(
+              children: <Widget>[
+              Image.asset('assets/Apar_home.png',width: 200,height: 200),
+              Text("APAR (Alat Pemadam Api Ringan)")
+            ],
+            ),
+              Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FloatingActionButton.large(onPressed: (){
+                  debugPrint("Laporan Clicked");
+                },
+                child: Icon(Icons.newspaper_outlined,size: 90,)
+                ),
+                
+
+                FloatingActionButton.large(onPressed: (){
+                  debugPrint("Agenda Clicked");
+                },
+                child: Icon(Icons.calendar_month,size: 90)
+                ),
+                
+                FloatingActionButton.large(onPressed: (){
+                  debugPrint("Daftar Clicked");
+                },
+                child: Icon(Icons.list_alt,size: 90)
+                )
+              ],
+            )
+          ],
         ),
         )
+      )
       );
   }
 }
